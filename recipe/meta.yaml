@@ -1,5 +1,5 @@
 {% set name = "ligo_hires_gps_time" %}
-{% set version = "0.6.2" %}
+{% set version = "0.6.4" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://git.ligo.org/cds/software/cr_tools/ligo_hires_gps_time/-/archive/{{ version }}/{{ version }}.tar.gz
-  sha256: 7b64655003acd662f2f8c4d8c18fe03cd1dc1bbfdc39dec8b754bd1a73cef152
+  sha256: e77f271b435ef4f0f579c49dcf46a9ac802d11c4a371602775f72cde7a30655b
 
 build:
-  skip: true  # [win or osx]
+  skip: true  # [win]
   error_overlinking: true
   error_overdepending: true
   number: 1
@@ -36,6 +36,7 @@ test:
   requires:
     - pytest
     - pip
+    - gpstime
   source_files:
     - test_pip.py
     - test_thump.py
