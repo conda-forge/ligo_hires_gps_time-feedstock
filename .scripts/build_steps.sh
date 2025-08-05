@@ -8,7 +8,6 @@
 # -*- mode: jinja-shell -*-
 
 set -xeuo pipefail
-echo "IN build steps"
 export FEEDSTOCK_ROOT="${FEEDSTOCK_ROOT:-/home/conda/feedstock_root}"
 source ${FEEDSTOCK_ROOT}/.scripts/logging_utils.sh
 
