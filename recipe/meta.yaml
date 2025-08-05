@@ -8,6 +8,8 @@ package:
 source:
   url: https://git.ligo.org/cds/software/cr_tools/ligo_hires_gps_time/-/archive/{{ version }}/{{ version }}.tar.gz
   sha256: e77f271b435ef4f0f579c49dcf46a9ac802d11c4a371602775f72cde7a30655b
+  patches:  # [osx and arm64]
+    - no_pyo3_extension_module.patch  # [osx and arm64]
 
 build:
   skip: true  # [win]

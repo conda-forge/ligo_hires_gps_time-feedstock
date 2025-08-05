@@ -1,0 +1,13 @@
+diff --git a/ligo_hires_gps_time/pyproject.toml b/ligo_hires_gps_time/pyproject.toml
+index 5ca28f9..9ab11da 100644
+--- a/ligo_hires_gps_time/pyproject.toml
++++ b/ligo_hires_gps_time/pyproject.toml
+@@ -21,8 +21,3 @@ test = ["gpstime", "pytest"]
+ [build-system]
+ requires = ["setuptools", "wheel>0.36.2", "patchelf", "maturin>=1.8,<2.0", "gpstime"]
+ build-backend = "maturin"
+-
+-[tool.maturin]
+-features = ["python", "hifitime",
+-    "pyo3/extension-module"
+-]
