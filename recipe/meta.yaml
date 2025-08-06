@@ -21,8 +21,8 @@ requirements:
   build:
     - python
     - {{ compiler('rust') }}
-    - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    - {{ compiler('c') }}  # [osx or linux]
+    - {{ stdlib("c") }}  # [osx or linux]
 
   host:
     - python
