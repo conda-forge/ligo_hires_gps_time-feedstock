@@ -80,7 +80,6 @@ about:
     - COPYING
     - COPYING-GPL-3
     - THIRDPARTY-LICENSES.yml
-  summary: Library for storing and manipulating hiresolution GPS time stamps for LIGO data streams.
 
 extra:
   recipe-maintainers:

@@ -7,8 +7,6 @@ Home: https://git.ligo.org/cds/software/cr_tools/ligo_hires_gps_time
 
 Package license: GPL-3.0-or-later
 
-Summary: Library for storing and manipulating hiresolution GPS time stamps for LIGO data streams.
-
 Development: https://git.ligo.org/cds/software/cr_tools/ligo_hires_gps_time.git
 
 Current build status
