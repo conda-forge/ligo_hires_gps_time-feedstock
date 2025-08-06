@@ -7,6 +7,8 @@ Home: https://git.ligo.org/cds/software/cr_tools/ligo_hires_gps_time
 
 Package license: GPL-3.0-or-later
 
+Summary: A high-resolution time library with instants taken from the GPS epoch.
+
 Development: https://git.ligo.org/cds/software/cr_tools/ligo_hires_gps_time.git
 
 Current build status

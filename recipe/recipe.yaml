@@ -74,6 +74,7 @@ tests:
           #     - pip check
 
 about:
+  summary: A high-resolution time library with instants taken from the GPS epoch.
   homepage: https://git.ligo.org/cds/software/cr_tools/ligo_hires_gps_time
   repository: https://git.ligo.org/cds/software/cr_tools/ligo_hires_gps_time.git
   license: GPL-3.0-or-later
