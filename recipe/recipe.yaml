@@ -4,7 +4,7 @@ schema_version: 1
 
 context:
   name: "ligo_hires_gps_time"
-  version: "0.6.4"
+  version: "0.6.5"
 
 package:
   name: "${{ name }}"
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://git.ligo.org/cds/software/cr_tools/ligo_hires_gps_time/-/archive/${{ version }}/${{ version }}.tar.gz
-  sha256: e77f271b435ef4f0f579c49dcf46a9ac802d11c4a371602775f72cde7a30655b
+  sha256: 3a57e3c7a21c5994533d944b9bdcacb2070d8141fc4073daeb96d210803c3d3a 
 
 build:
   number: 0
@@ -22,11 +22,13 @@ build:
       JEMALLOC_SYS_WITH_LG_PAGE: ${{ '16' if (aarch64 or ppc64le) else '' }}
       PYTHONIOENCODING: utf-8
     content:
+      - "cargo-bundle-licenses --format yaml --output THIRDPARTY.yml"
       - "${{ PYTHON }} -m pip install -v --use-pep517 --no-deps --no-build-isolation ./ligo_hires_gps_time"
 
 requirements:
   build:
     - python
+    - cargo-bundle-licenses
     - "${{ compiler('rust') }}"
     - if: not win
       then:
@@ -79,7 +81,7 @@ about:
   license_file:
     - COPYING
     - COPYING-GPL-3
-    - THIRDPARTY-LICENSES.yml
+    - THIRDPARTY.yml
 
 extra:
   recipe-maintainers:
