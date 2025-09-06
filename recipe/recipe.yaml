@@ -12,10 +12,10 @@ package:
 
 source:
   url: https://git.ligo.org/cds/software/cr_tools/ligo_hires_gps_time/-/archive/${{ version }}/${{ version }}.tar.gz
-  sha256: 3a57e3c7a21c5994533d944b9bdcacb2070d8141fc4073daeb96d210803c3d3a 
+  sha256: 3a57e3c7a21c5994533d944b9bdcacb2070d8141fc4073daeb96d210803c3d3a
 
 build:
-  number: 1
+  number: 2
 
   script:
     env:
@@ -32,7 +32,7 @@ requirements:
     - "${{ compiler('rust') }}"
     - if: not win
       then:
-        - "${{ compiler('c') }}" 
+        - "${{ compiler('c') }}"
         - "${{ stdlib('c') }}"
     - if: build_platform != target_platform
       then:
@@ -54,7 +54,7 @@ requirements:
 
 tests:
   - script:
-     - python -m pytest
+      - python -m pytest
     requirements:
       run:
         - pytest
@@ -64,9 +64,9 @@ tests:
         - test_pip.py
         - test_thump.py
   - python:
-     imports:
+      imports:
         - ligo_hires_gps_time
-     pip_check: true
+      pip_check: true
           # source_files:
           #  - test_pip.py
           #  - test_thump.py
