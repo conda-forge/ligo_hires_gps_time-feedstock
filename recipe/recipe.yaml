@@ -15,7 +15,7 @@ source:
   sha256: 46dec9a5861f276ab6bbc2b3ad882677e3ac0f813582b852fbbb8c8f917b6558
 
 build:
-  number: 2
+  number: 0
 
   script:
     env:
