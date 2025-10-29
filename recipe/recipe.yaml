@@ -4,7 +4,7 @@ schema_version: 1
 
 context:
   name: "ligo_hires_gps_time"
-  version: "0.6.5"
+  version: "0.7.0"
 
 package:
   name: "${{ name }}"
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://git.ligo.org/cds/software/cr_tools/ligo_hires_gps_time/-/archive/${{ version }}/${{ version }}.tar.gz
-  sha256: 3a57e3c7a21c5994533d944b9bdcacb2070d8141fc4073daeb96d210803c3d3a 
+  sha256: 46dec9a5861f276ab6bbc2b3ad882677e3ac0f813582b852fbbb8c8f917b6558
 
 build:
   number: 2
